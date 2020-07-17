@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&family=Teko:wght@400;600&display=swap');
-
+/*fonts from google fonts*/
 
 
 body {
@@ -7,15 +7,20 @@ body {
     color: black;
     font-family: 'Montserrat', sans-serif;
     font-size: calc(0.375rem + 0.5vw);
+    /*    the above code is the font size plus the padding */
 }
 
 /*typography */
+
+/*rem is used on the font sizes as its based on the root element and translates better*/
 
 p {
     font-size: 1.5625rem;
     line-height: 1.125em;
     margin-bottom: 0.9375em;
     margin-top: 0.9375em;
+
+    /*    theres a margin on the top and bottom to spread out each paragraph, */
 }
 
 
@@ -27,7 +32,7 @@ h4,
 h5,
 h6 {
     font-family: 'Teko', sans-serif;
-    font-size: calc(1.250rem + 0.5vw);
+    font-size: 1.250rem;
     text-align: left;
     margin-bottom: 0.625rem;
 }
@@ -40,6 +45,8 @@ h1 {
     text-transform: uppercase;
     letter-spacing: 0.125rem;
     font-style: normal;
+
+
 
 }
 
@@ -63,6 +70,7 @@ h5 {
     font-size: 1.000rem;
     font-family: 'Montserrat',
         sans-serif;
+    text-align: center;
 }
 
 /*achor styles */
@@ -81,6 +89,8 @@ a:visited {
     color: #A3A3E7;
 }
 
+/*above to are for the intext clickable link*/
+
 a:active {
     color: white;
     background-color: gray;
@@ -94,7 +104,7 @@ h1 a:visited {
 h1 a:hover {
     text-decoration: none;
     color: #F3F3F7;
-
+    /*the above flips the colours on the main nav links for the hover look*/
 }
 
 
@@ -104,20 +114,18 @@ h1 a:hover {
 .wrapper {
     width: 61.25rem;
     margin: 0px auto 0px auto;
+    /*    this confines everything into the centre of the page*/
 }
 
 header {
     background-color: darkgray;
-    height: 11.25rem;
-    padding-top: 0px;
+    height: 11.25em;
+    padding: 1.25rem 0;
 
 }
 
 /*column for navigation items*/
-.col {
-    float: left;
-    width: 33%;
-}
+
 
 nav {
     background-color: darkgrey;
@@ -131,8 +139,6 @@ nav {
 nav ul {
     margin-top: -60px;
     text-align: center;
-    /* margin-left: 25rem;
-    margin-right: 25rem; */
 }
 
 nav ul li {
@@ -154,46 +160,44 @@ nav ul li a.currentpage {
     background-color: white;
     text-decoration: none;
     color: darkgray;
+    /*    current page is the same as the hover style. Helps to orientate the user*/
 }
 
 .col-middle {
     margin: 0 auto;
-    /*    width: 215px;*/
     padding-top: 3.75rem;
+    /*      this centres the H1 nav inbetween the smaller nav items in the header*/
 }
 
 .left-item {
     float: left;
+
+    /*    this puts the history and robin boyd nav to the left of the hearder*/
 }
 
 .right-item {
     float: right;
+    /*     this puts the gallery and significance nav to the right of the hearder*/
 }
 
 
 .hero {
     background-image: url(../images/churchill-house-sketch.jpg);
     min-height: 43.75em;
-    /* height of hero image */
     background-color: ivory;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
-
+    /*this is the code for the main image at the top of the page. Its outsie of the wrapper so it goes across the whole website. */
 }
 
-main {
-    color: black;
-}
+
 
 .text-container {
-    /*
-    width: 95%;
-    margin: 0px auto;
-*/
     background-color: #fff;
     padding: 1.25em;
     overflow: auto;
+    /*    the overflow: auto; helps the images stay inside the text container.*/
 }
 
 footer {
@@ -206,21 +210,16 @@ footer {
 .leftimg {
     max-width: 100%;
     height: auto;
-
     margin: 1.25em 0px;
+    /*    coding for the images. Max width keeps the images across the whole page and also helps with their responsiveness when scaling up and down. */
 }
 
-
+/*below is the code for the mobile website version*/
 @media (max-width: 30em) {
     .wrapper {
         width: 100%;
+        /*        max width is 30em because thats the standard size for a mobile phone*/
     }
-
-    header {
-        height: 12rem;
-        padding: 1.25rem 0;
-    }
-
 
 
     .col {
@@ -232,24 +231,24 @@ footer {
         min-height: 25em;
     }
 
-    h1 {
-        margin-bottom: 0;
-        font-size: 3.5rem;
-        text-align: left;
-        padding-left: 20px;
+    header {
+        height: 18rem;
+        padding: 1.25rem 0;
+        /*        the hearder is larger to fit all the nav inside it*/
     }
+
 
     nav ul {
         padding-top: 0;
         margin-top: 1.25rem;
         margin-left: 0;
         margin-right: 0;
-        text-align: left;
+        text-align: center;
         line-height: 2.2em;
     }
 
     nav ul li a {
-        padding: 10px;
+        padding: 6px;
     }
 
     .col-middle {
@@ -264,6 +263,7 @@ footer {
         float: none;
     }
 
+    /*the item float is none to group them together in the centre*/
 }
 
 @media (min-width: 30em) and (max-width: 1020px) {}
